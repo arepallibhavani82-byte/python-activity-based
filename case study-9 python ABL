@@ -1,0 +1,37 @@
+Case Study 42: Student Marks Matrix Analysis
+1. Problem Statement
+Analyse student marks stored in a nested list and calculate each student's total and average.
+2. Objectives
+•	Represent marks using nested lists.
+•	Calculate row-wise totals and averages.
+•	Find the highest total.
+3. Algorithm
+37.	Store student names and marks in lists.
+38.	For each student, calculate total and average.
+39.	Compare totals to find the highest scorer.
+40.	Display the results.
+4. Python Source Code
+names = ["Anu", "Ravi", "Sita"]
+marks = [[80, 70, 90], [60, 75, 65], [90, 85, 95]]
+highest = 0
+top_student = ""
+
+for i in range(len(names)):
+    total = sum(marks[i])
+    average = total / len(marks[i])
+    print(names[i], "total:", total, "average:", average)
+
+    if total > highest:
+        highest = total
+        top_student = names[i]
+
+print("Top student:", top_student)
+print("Highest total:", highest)
+5. Sample Output
+Anu total: 240 average: 80.0
+Ravi total: 200 average: 66.66666666666667
+Sita total: 270 average: 90.0
+Top student: Sita
+Highest total: 270
+6. Test Cases
+Marks [80,70,90] → total 240, average 80. Marks [90,85,95] → total 270, highest total.
