@@ -1,0 +1,40 @@
+Case Study 19: Multi-Product Shopping Budget Constraint
+1. Problem Statement
+Calculate the total cost of a shopping basket and check whether it is within a fixed budget.
+2. Objectives
+•	Store product prices and quantities in lists.
+•	Calculate the total bill.
+•	Compare the bill with the budget.
+3. Algorithm
+10.	Store product names, prices and quantities in lists.
+11.	Calculate each product cost.
+12.	Add costs to find the total.
+13.	Compare total with budget and display the result.
+4. Python Source Code
+products = ["Pen", "Book", "Bag"]
+prices = [10, 50, 400]
+quantities = [2, 3, 1]
+budget = 600
+total = 0
+
+for i in range(len(products)):
+    cost = prices[i] * quantities[i]
+    total = total + cost
+    print(products[i], "cost:", cost)
+
+print("Total bill:", total)
+print("Budget:", budget)
+
+if total <= budget:
+    print("Within budget")
+else:
+    print("Over budget")
+5. Sample Output
+Pen cost: 20
+Book cost: 150
+Bag cost: 400
+Total bill: 570
+Budget: 600
+Within budget
+6. Test Cases
+Budget 600 and total 570 → Within budget. If budget is 500 → Over budget.
