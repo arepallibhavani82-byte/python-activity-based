@@ -1,0 +1,117 @@
+Case Study 17: Student Performance Trend Analysis
+1. Problem Statement
+Compare a student's marks across examinations and identify improvement or decline for each subject.
+2. Objectives
+•	Store marks in lists.
+•	Compare marks using a for loop.
+•	Calculate the change in marks.
+3. Algorithm
+1.	Store subject names, previous marks and current marks in lists.
+2.	Visit each subject using a for loop.
+3.	Subtract previous marks from current marks.
+4.	Display improvement, decline or no change.
+4. Python Source Code
+subjects = ["Python", "Maths", "English"]
+previous = [70, 65, 80]
+current = [85, 60, 80]
+
+for i in range(len(subjects)):
+    change = current[i] - previous[i]
+    print(subjects[i], "change:", change)
+
+    if change > 0:
+        print("Improved")
+    elif change < 0:
+        print("Declined")
+    else:
+        print("No change")
+5. Sample Output
+Python change: 15
+Improved
+Maths change: -5
+Declined
+English change: 0
+No change
+6. Test Cases
+Python: 70 to 85 → improved by 15. Maths: 65 to 60 → declined by 5. English: 80 to 80 → no change.
+ 
+Case Study 19: Multi-Product Shopping Budget Constraint
+1. Problem Statement
+Calculate the total cost of a shopping basket and check whether it is within a fixed budget.
+2. Objectives
+•	Store product prices and quantities in lists.
+•	Calculate the total bill.
+•	Compare the bill with the budget.
+3. Algorithm
+5.	Store product names, prices and quantities in lists.
+6.	Calculate each product cost.
+7.	Add costs to find the total.
+8.	Compare total with budget and display the result.
+4. Python Source Code
+products = ["Pen", "Book", "Bag"]
+prices = [10, 50, 400]
+quantities = [2, 3, 1]
+budget = 600
+total = 0
+
+for i in range(len(products)):
+    cost = prices[i] * quantities[i]
+    total = total + cost
+    print(products[i], "cost:", cost)
+
+print("Total bill:", total)
+print("Budget:", budget)
+
+if total <= budget:
+    print("Within budget")
+else:
+    print("Over budget")
+5. Sample Output
+Pen cost: 20
+Book cost: 150
+Bag cost: 400
+Total bill: 570
+Budget: 600
+Within budget
+6. Test Cases
+Budget 600 and total 570 → Within budget. If budget is 500 → Over budget.
+ 
+Case Study 31: String-Based Examination Answer Evaluation
+1. Problem Statement
+Compare student answers with an answer key and calculate correct, incorrect and unanswered questions.
+2. Objectives
+•	Compare strings.
+•	Count correct, incorrect and unanswered responses.
+•	Calculate marks.
+3. Algorithm
+9.	Store the answer key and student answers as lists.
+10.	Initialize counters to zero.
+11.	Compare each answer using a for loop.
+12.	Add one mark for each correct answer.
+13.	Display the result.
+4. Python Source Code
+key = ["A", "B", "C", "D", "A"]
+answers = ["A", "C", "C", "", "B"]
+correct = 0
+wrong = 0
+unanswered = 0
+
+for i in range(len(key)):
+    if answers[i] == "":
+        unanswered = unanswered + 1
+    elif answers[i] == key[i]:
+        correct = correct + 1
+    else:
+        wrong = wrong + 1
+
+print("Correct:", correct)
+print("Incorrect:", wrong)
+print("Unanswered:", unanswered)
+print("Marks:", correct)
+5. Sample Output
+Correct: 2
+Incorrect: 2
+Unanswered: 1
+Marks: 2
+6. Test Cases
+Key A,B,C and answers A,B,C → 3 correct. Empty answer → counted as unanswered.
