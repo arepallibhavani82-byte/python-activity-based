@@ -1,0 +1,39 @@
+Case Study 53: Food Waste Monitoring System
+1. Problem Statement
+Calculate leftover meals and food-wastage percentage across several days.
+2. Objectives
+•	Store daily meal data in lists.
+•	Calculate leftover meals.
+•	Identify days with high wastage.
+3. Algorithm
+23.	Store meals prepared and meals served in lists.
+24.	For each day, calculate leftovers and wastage percentage.
+25.	Compare wastage with the 10% limit.
+26.	Display the daily results.
+4. Python Source Code
+days = ["Monday", "Tuesday", "Wednesday"]
+prepared = [100, 120, 80]
+served = [90, 100, 76]
+
+for i in range(len(days)):
+    leftover = prepared[i] - served[i]
+    waste = leftover / prepared[i] * 100
+    print(days[i], "leftover:", leftover)
+    print("Wastage:", round(waste, 2), "%")
+
+    if waste > 10:
+        print("Above acceptable limit")
+    else:
+        print("Within limit")
+5. Sample Output
+Monday leftover: 10
+Wastage: 10.0 %
+Within limit
+Tuesday leftover: 20
+Wastage: 16.67 %
+Above acceptable limit
+Wednesday leftover: 4
+Wastage: 5.0 %
+Within limit
+6. Test Cases
+Prepared 100, served 90 → 10 leftovers and 10% wastage. Prepared 120, served 100 → 20 leftovers and 16.67% wastage.
