@@ -1,0 +1,43 @@
+Case Study 39: Multi-Stage Examination Eligibility System
+1. Problem Statement
+Check examination eligibility based on attendance, internal marks, laboratory completion and fee payment.
+2. Objectives
+•	Read eligibility details.
+•	Check multiple conditions.
+•	Display every unmet requirement.
+3. Algorithm
+19.	Read attendance, internal marks, lab status and fee status.
+20.	Check each condition.
+21.	Print every unmet requirement.
+22.	If none are unmet, display eligible.
+4. Python Source Code
+attendance = int(input("Enter attendance percentage: "))
+internal = int(input("Enter internal marks out of 30: "))
+lab = input("Lab completed? (yes/no): ")
+fees = input("Fees paid? (yes/no): ")
+
+eligible = True
+
+if attendance < 75:
+    print("Attendance requirement not met")
+    eligible = False
+if internal < 15:
+    print("Internal marks requirement not met")
+    eligible = False
+if lab != "yes":
+    print("Laboratory not completed")
+    eligible = False
+if fees != "yes":
+    print("Fees not paid")
+    eligible = False
+
+if eligible:
+    print("Eligible for examination")
+5. Sample Output
+Enter attendance percentage: 80
+Enter internal marks out of 30: 20
+Lab completed? (yes/no): yes
+Fees paid? (yes/no): no
+Fees not paid
+6. Test Cases
+80% attendance, 20 marks, lab yes, fees yes → Eligible. Attendance 60% → attendance requirement not met.
