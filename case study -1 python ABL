@@ -1,0 +1,40 @@
+Case Study 1: Attendance Recovery Computation
+1. Problem Statement
+Calculate a student's current attendance percentage and find the minimum number of consecutive classes the student must attend to reach 75%.
+2. Objectives
+•	Calculate attendance percentage.
+•	Check whether attendance is at least 75%.
+•	Find the minimum extra classes needed.
+3. Algorithm
+1.	Read total classes and attended classes.
+2.	Validate the input.
+3.	Calculate attendance percentage.
+4.	Use a while loop until attendance reaches 75%.
+5.	Display extra classes and final percentage.
+4. Python Source Code
+total = int(input("Enter total classes: "))
+attended = int(input("Enter attended classes: "))
+
+if total <= 0 or attended < 0 or attended > total:
+    print("Invalid input")
+else:
+    percentage = attended / total * 100
+    extra = 0
+
+    while percentage < 75:
+        total = total + 1
+        attended = attended + 1
+        extra = extra + 1
+        percentage = attended / total * 100
+
+    print("Extra classes required:", extra)
+    print("Final attendance:", round(percentage, 2), "%")
+5. Sample Output
+Enter total classes: 40
+Enter attended classes: 25
+Extra classes required: 20
+Final attendance: 75.0 %
+6. Test Cases
+Total=40, attended=30 → 0 extra classes. Total=40, attended=25 → 20 extra classes. Total=0 → Invalid input.
+ 
+
