@@ -1,0 +1,40 @@
+Case Study 13: ATM Transaction Sequence Simulation
+1. Problem Statement
+Process a sequence of deposits and withdrawals, update the account balance and reject invalid withdrawals.
+2. Objectives
+•	Use a list of transactions.
+•	Update balance for each transaction.
+•	Reject withdrawals above the available balance.
+3. Algorithm
+27.	Set the starting balance.
+28.	Store transactions in a list of tuples.
+29.	Process each transaction using a for loop.
+30.	Add deposits and validate withdrawals.
+31.	Display final balance and transaction summary.
+4. Python Source Code
+balance = 1000
+transactions = [("deposit", 500), ("withdraw", 200),
+                ("withdraw", 1500), ("withdraw", 100)]
+
+for kind, amount in transactions:
+    if amount <= 0:
+        print("Invalid amount")
+    elif kind == "deposit":
+        balance = balance + amount
+        print("Deposit successful:", amount)
+    elif kind == "withdraw":
+        if amount <= balance:
+            balance = balance - amount
+            print("Withdrawal successful:", amount)
+        else:
+            print("Insufficient balance")
+
+print("Final balance:", balance)
+5. Sample Output
+Deposit successful: 500
+Withdrawal successful: 200
+Insufficient balance
+Withdrawal successful: 100
+Final balance: 1200
+6. Test Cases
+Starting balance 1000; deposit 500; withdraw 200 → balance 1300. Attempt to withdraw 1500 → rejected.
