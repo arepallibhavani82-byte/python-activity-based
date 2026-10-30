@@ -1,0 +1,35 @@
+Case Study 45: Weekly Electricity Consumption Matrix
+1. Problem Statement
+Calculate daily electricity consumption for appliances over a week and identify readings above a limit.
+2. Objectives
+•	Store readings in a nested list.
+•	Calculate daily totals.
+•	Identify consumption above a given limit.
+3. Algorithm
+41.	Store appliance readings for each day in a nested list.
+42.	Use a for loop to calculate each day's total.
+43.	Compare the total with the daily limit.
+44.	Display totals and warnings.
+4. Python Source Code
+days = ["Monday", "Tuesday", "Wednesday"]
+# Each row contains readings for three appliances
+readings = [[2, 3, 4], [4, 5, 3], [1, 2, 2]]
+limit = 10
+
+for i in range(len(days)):
+    total = sum(readings[i])
+    print(days[i], "consumption:", total, "units")
+
+    if total > limit:
+        print("Consumption above limit")
+    else:
+        print("Consumption within limit")
+5. Sample Output
+Monday consumption: 9 units
+Consumption within limit
+Tuesday consumption: 12 units
+Consumption above limit
+Wednesday consumption: 5 units
+Consumption within limit
+6. Test Cases
+Readings [2,3,4] → total 9, within limit. Readings [4,5,3] → total 12, above limit.
