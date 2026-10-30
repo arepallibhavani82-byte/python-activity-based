@@ -1,0 +1,39 @@
+Case Study 31: String-Based Examination Answer Evaluation
+1. Problem Statement
+Compare student answers with an answer key and calculate correct, incorrect and unanswered questions.
+2. Objectives
+•	Compare strings.
+•	Count correct, incorrect and unanswered responses.
+•	Calculate marks.
+3. Algorithm
+14.	Store the answer key and student answers as lists.
+15.	Initialize counters to zero.
+16.	Compare each answer using a for loop.
+17.	Add one mark for each correct answer.
+18.	Display the result.
+4. Python Source Code
+key = ["A", "B", "C", "D", "A"]
+answers = ["A", "C", "C", "", "B"]
+correct = 0
+wrong = 0
+unanswered = 0
+
+for i in range(len(key)):
+    if answers[i] == "":
+        unanswered = unanswered + 1
+    elif answers[i] == key[i]:
+        correct = correct + 1
+    else:
+        wrong = wrong + 1
+
+print("Correct:", correct)
+print("Incorrect:", wrong)
+print("Unanswered:", unanswered)
+print("Marks:", correct)
+5. Sample Output
+Correct: 2
+Incorrect: 2
+Unanswered: 1
+Marks: 2
+6. Test Cases
+Key A,B,C and answers A,B,C → 3 correct. Empty answer → counted as unanswered
