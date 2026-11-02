@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sweet Bakery</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background-color: #fff5e6;
+        }
+
+        header {
+            background-color: #8b4513;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #d2691e;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-weight: bold;
+        }
+
+        h2 {
+            color: #8b4513;
+            text-align: center;
+        }
+
+        .products {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .box {
+            background-color: white;
+            width: 200px;
+            text-align: center;
+            padding: 15px;
+            border: 2px solid #deb887;
+            border-radius: 10px;
+        }
+
+        .box img {
+            width: 180px;
+            height: 130px;
+            border-radius: 10px;
+        }
+
+        .price {
+            color: green;
+            font-weight: bold;
+        }
+
+        .offer {
+            background-color: #ffe4b5;
+            text-align: center;
+            padding: 20px;
+            color: red;
+        }
+
+        footer {
+            background-color: #8b4513;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Sweet Bakery</h1>
+    <p>Freshly Baked Happiness!</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#cakes">Cakes</a>
+    <a href="#pastries">Pastries</a>
+    <a href="#cookies">Cookies</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<h2 id="home">Welcome to Sweet Bakery</h2>
+<p style="text-align:center;">
+    Enjoy delicious cakes, pastries and cookies made with love.
+</p>
+
+<h2 id="cakes">Our Cakes</h2>
+
+<div class="products">
+
+    <div class="box">
+        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400">
+        <h3>Chocolate Cake</h3>
+        <p class="price">₹500</p>
+    </div>
+
+    <div class="box">
+        <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400">
+        <h3>Strawberry Cake</h3>
+        <p class="price">₹600</p>
+    </div>
+
+</div>
+
+<h2 id="pastries">Our Pastries</h2>
+
+<div class="products">
+
+    <div class="box">
+        <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=400">
+        <h3>Chocolate Pastry</h3>
+        <p class="price">₹80</p>
+    </div>
+
+    <div class="box">
+        <img src="https://images.unsplash.com/photo-1550617931-e17a7b70dce2?w=400">
+        <h3>Cream Pastry</h3>
+        <p class="price">₹100</p>
+    </div>
+
+</div>
+
+<h2 id="cookies">Our Cookies</h2>
+
+<div class="products">
+
+    <div class="box">
+        <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=400">
+        <h3>Chocolate Cookies</h3>
+        <p class="price">₹150</p>
+    </div>
+
+    <div class="box">
+        <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=400">
+        <h3>Butter Cookies</h3>
+        <p class="price">₹120</p>
+    </div>
+
+</div>
+
+<h2>Custom Cake Designs</h2>
+
+<div class="products">
+    <div class="box">
+        <img src="https://images.unsplash.com/photo-1535141192574-5d4897c12636?w=400">
+        <h3>Birthday Cake</h3>
+        <p>Customized Designs Available</p>
+    </div>
+
+    <div class="box">
+        <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=400">
+        <h3>Wedding Cake</h3>
+        <p>Special Wedding Designs</p>
+    </div>
+</div>
+
+<div class="offer">
+    <h2>Seasonal Offers!</h2>
+    <h3>Get 20% OFF on all cakes!</h3>
+    <p>Celebrate every occasion with Sweet Bakery.</p>
+</div>
+
+<footer id="contact">
+    <h2 style="color:white;">Contact Us</h2>
+    <p>Sweet Bakery, Vijayawada</p>
+    <p>Phone: 9876543210</p>
+    <p>Email: sweetbakery@gmail.com</p>
+    <p>© 2026 Sweet Bakery</p>
+</footer>
+
+</body>
+</html>
